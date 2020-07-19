@@ -1,8 +1,8 @@
-class Employees {
-    constructor(Manager, Engineer, Intern) {
-        this.Manager = Manager;
-        this.Engineer = Engineer;
-        this.Intern = Intern;
+class employees {
+    constructor(manager, engineer, intern) {
+        this.manager = manager;
+        this.engineer = engineer;
+        this.intern = intern;
     }
 
     manager() {
