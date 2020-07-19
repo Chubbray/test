@@ -2,9 +2,9 @@ const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 
-// const Manager = require("./lib/Manager");
-// const Engineer = require("./lib/Engineer");
-// const Intern = require("./lib/Intern");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 
 
 const teamMembers = [];
@@ -35,7 +35,7 @@ function appMenu() {
                 message: "What is the Managers Office Numbr?",
             }
         ]).then(answers => {
-            //const manager = new Manager(answers.managerName, answers.managerId, answers.manegerEmail, answers.managerOfficeNumber);
+            const manager = new Manager(answers.managerName, answers.managerId, answers.manegerEmail, answers.managerOfficeNumber);
             teamMembers.push(manager);
             idArray.push(answers.managerId);
             createTeam();
@@ -92,7 +92,7 @@ function appMenu() {
                 message: "What is the Engineer GitHub?",
             }
         ]).then(answers => {
-            //const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGitHub);
+            const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGitHub);
             teamMembers.push(engineer);
             idArray.push(answers.engineerId);
             createTeam();
@@ -122,7 +122,7 @@ function appMenu() {
                 message: "What is the Intern School name?",
             }
         ]).then(answers => {
-            //const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+            const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
             teamMembers.push(intern);
             idArray.push(answers.internId);
             createTeam();
