@@ -135,26 +135,28 @@ function appMenu() {
         return
     }
     createManager()
+  
 }
-
 appMenu()
 
-function init() {
-    inquirer.prompt([])
-        .then(function (data) {
-            const filename =
-                "README.md"
+path.basename('C:\\temp\\myfile.html');
 
-            console.log(data)
-            fs.writeFile(filename, JSON.stringify(data, null, '\t'), function (err) {
-                if (err) {
-                    return console.log(err);
-                }
+// function init() {
+//     inquirer.prompt(questions)
+//         .then(function (data) {
+//             const filename =
+//                 "README.md"
 
-                console.log('Success!');
-            });
-        });
-}
+//             console.log(data)
+//             fs.writeFile(filename, JSON.stringify(data, null, '\t'), function (err) {
+//                 if (err) {
+//                     return console.log(err);
+//                 }
 
-init();
+//                 console.log('Success!');
+//             });
+//         });
+// }
+
+// init();
 
