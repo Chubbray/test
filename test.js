@@ -139,3 +139,22 @@ function appMenu() {
 
 appMenu()
 
+function init() {
+    inquirer.prompt([])
+        .then(function (data) {
+            const filename =
+                "README.md"
+
+            console.log(data)
+            fs.writeFile(filename, JSON.stringify(data, null, '\t'), function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+
+                console.log('Success!');
+            });
+        });
+}
+
+init();
+
